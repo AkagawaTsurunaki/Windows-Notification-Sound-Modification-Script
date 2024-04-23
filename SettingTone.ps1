@@ -1,4 +1,7 @@
-# Read event lables from JSON file.
+<#
+Author: AkagawaTsurunaki
+#>
+
 function ReadEventLablesFromJsonFile {
     param ()
     $eventLablesJsonFilePath = '.\EventLables.json'
@@ -78,7 +81,7 @@ $eventLables = ReadEventLablesFromJsonFile
 $toneFolderPath = Read-Host -Prompt "Please enter the path of the folder that stores tones"
 
 $tonePackageName = Split-Path $toneFolderPath -Leaf
-Write-Host "Package" $tonePackageName "found"
+Write-Host "Tone package" $tonePackageName "found"
 
 $TonePackageId = CreateAppEventsSchemesNamesByPackageName -tonePackageName $tonePackageName
 $TonePackageId = $TonePackageId[0]
@@ -92,7 +95,9 @@ foreach ($toneFileName in $allToneFilesInfo.Keys) {
         $registryItem = "HKCU:\AppEvents\Schemes\Apps\" + $eventLable.App +"\" + $eventLable.ID + "\" + $TonePackageId
         $toneFilePath = $allToneFilesInfo[$toneFileName]
         if (SetTone -registryItem $registryItem -toneFilePath $toneFilePath) {
-            Write-Host "$registryItem was set as $toneFilePath"
+            Write-Host "Set $registryItem to $toneFilePath"
         }
     }
 }
+
+Write-Host "Tone package $tonePackageName has been registered in your system successfully"
