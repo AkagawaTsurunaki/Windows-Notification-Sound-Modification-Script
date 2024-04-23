@@ -3,299 +3,299 @@
         "App": ".Default",
         "EventLables": [
             {
-                "id": ".Default",
-                "en": "Default Beep",
-                "zh": "默认响声"
+                "ID": ".Default",
+                "EN": "Default Beep",
+                "ZH": "默认响声"
             },
             {
-                "id": "AppGPFault",
-                "en": "Program Error",
-                "zh": "程序出错"
+                "ID": "AppGPFault",
+                "EN": "Program Error",
+                "ZH": "程序出错"
             },
             {
-                "id": "CCSelect",
-                "en": "Select",
-                "zh": "选择"
+                "ID": "CCSelect",
+                "EN": "Select",
+                "ZH": "选择"
             },
             {
-                "id": "ChangeTheme",
-                "en": "Change Theme",
-                "zh": "Windows 更改主题"
+                "ID": "ChangeTheme",
+                "EN": "Change Theme",
+                "ZH": "Windows 更改主题"
             },
             {
-                "id": "Close",
-                "en": "Close Program",
-                "zh": "关闭程序"
+                "ID": "Close",
+                "EN": "Close Program",
+                "ZH": "关闭程序"
             },
             {
-                "id": "CriticalBatteryAlarm",
-                "en": "Critical Battery Alarm",
-                "zh": "电池严重短缺警报"
+                "ID": "CriticalBatteryAlarm",
+                "EN": "Critical Battery Alarm",
+                "ZH": "电池严重短缺警报"
             },
             {
-                "id": "DeviceConnect",
-                "en": "Device Connect",
-                "zh": "设备连接"
+                "ID": "DeviceConnect",
+                "EN": "Device Connect",
+                "ZH": "设备连接"
             },
             {
-                "id": "DeviceDisconnect",
-                "en": "Device Disconnect",
-                "zh": "设备中断连接"
+                "ID": "DeviceDisconnect",
+                "EN": "Device Disconnect",
+                "ZH": "设备中断连接"
             },
             {
-                "id": "DeviceFail",
-                "en": "Device Failed to Connect",
-                "zh": "设备未能连接"
+                "ID": "DeviceFail",
+                "EN": "Device Failed to Connect",
+                "ZH": "设备未能连接"
             },
             {
-                "id": "FaxBeep",
-                "en": "New Fax Notification",
-                "zh": "新传真通知"
+                "ID": "FaxBeep",
+                "EN": "New Fax Notification",
+                "ZH": "新传真通知"
             },
             {
-                "id": "LowBatteryAlarm",
-                "en": "Low Battery Alarm",
-                "zh": "电池不足警报"
+                "ID": "LowBatteryAlarm",
+                "EN": "Low Battery Alarm",
+                "ZH": "电池不足警报"
             },
             {
-                "id": "MailBeep",
-                "en": "Desktop Mail Notification",
-                "zh": "桌面邮件通知"
+                "ID": "MailBeep",
+                "EN": "Desktop Mail Notification",
+                "ZH": "桌面邮件通知"
             },
             {
-                "id": "Maximize",
-                "en": "Maximize",
-                "zh": "最大化"
+                "ID": "Maximize",
+                "EN": "Maximize",
+                "ZH": "最大化"
             },
             {
-                "id": "MenuCommand",
-                "en": "Menu Command",
-                "zh": "菜单命令"
+                "ID": "MenuCommand",
+                "EN": "Menu Command",
+                "ZH": "菜单命令"
             },
             {
-                "id": "MenuPopup",
-                "en": "Menu Pop-up",
-                "zh": "弹出菜单"
+                "ID": "MenuPopup",
+                "EN": "Menu Pop-up",
+                "ZH": "弹出菜单"
             },
             {
-                "id": "MessageNudge",
-                "en": "Message Nudge",
-                "zh": "消息闪屏振动"
+                "ID": "MessageNudge",
+                "EN": "Message Nudge",
+                "ZH": "消息闪屏振动"
             },
             {
-                "id": "Minimize",
-                "en": "Minimize",
-                "zh": "最小化"
+                "ID": "Minimize",
+                "EN": "Minimize",
+                "ZH": "最小化"
             },
             {
-                "id": "Notification.Default",
-                "en": "Notification",
-                "zh": "通知"
+                "ID": "Notification.Default",
+                "EN": "Notification",
+                "ZH": "通知"
             },
             {
-                "id": "Notification.IM",
-                "en": "Instant Message Notification",
-                "zh": "即时消息通知"
+                "ID": "Notification.IM",
+                "EN": "Instant Message Notification",
+                "ZH": "即时消息通知"
             },
             {
-                "id": "Notification.Looping.Alarm",
-                "en": "Alarm 1",
-                "zh": "警报 1"
+                "ID": "Notification.Looping.Alarm",
+                "EN": "Alarm 1",
+                "ZH": "警报 1"
             },
             {
-                "id": "Notification.Looping.Alarm10",
-                "en": "Alarm 10",
-                "zh": "警报 10"
+                "ID": "Notification.Looping.Alarm10",
+                "EN": "Alarm 10",
+                "ZH": "警报 10"
             },
             {
-                "id": "Notification.Looping.Alarm2",
-                "en": "Alarm 2",
-                "zh": "警报 2"
+                "ID": "Notification.Looping.Alarm2",
+                "EN": "Alarm 2",
+                "ZH": "警报 2"
             },
             {
-                "id": "Notification.Looping.Alarm3",
-                "en": "Alarm 3",
-                "zh": "警报 3"
+                "ID": "Notification.Looping.Alarm3",
+                "EN": "Alarm 3",
+                "ZH": "警报 3"
             },
             {
-                "id": "Notification.Looping.Alarm4",
-                "en": "Alarm 4",
-                "zh": "警报 4"
+                "ID": "Notification.Looping.Alarm4",
+                "EN": "Alarm 4",
+                "ZH": "警报 4"
             },
             {
-                "id": "Notification.Looping.Alarm5",
-                "en": "Alarm 5",
-                "zh": "警报 5"
+                "ID": "Notification.Looping.Alarm5",
+                "EN": "Alarm 5",
+                "ZH": "警报 5"
             },
             {
-                "id": "Notification.Looping.Alarm6",
-                "en": "Alarm 6",
-                "zh": "警报 6"
+                "ID": "Notification.Looping.Alarm6",
+                "EN": "Alarm 6",
+                "ZH": "警报 6"
             },
             {
-                "id": "Notification.Looping.Alarm7",
-                "en": "Alarm 7",
-                "zh": "警报 7"
+                "ID": "Notification.Looping.Alarm7",
+                "EN": "Alarm 7",
+                "ZH": "警报 7"
             },
             {
-                "id": "Notification.Looping.Alarm8",
-                "en": "Alarm 8",
-                "zh": "警报 8"
+                "ID": "Notification.Looping.Alarm8",
+                "EN": "Alarm 8",
+                "ZH": "警报 8"
             },
             {
-                "id": "Notification.Looping.Alarm9",
-                "en": "Alarm 9",
-                "zh": "警报 9"
+                "ID": "Notification.Looping.Alarm9",
+                "EN": "Alarm 9",
+                "ZH": "警报 9"
             },
             {
-                "id": "Notification.Looping.Call",
-                "en": "Incoming Call Notification 1",
-                "zh": "来电通知 1"
+                "ID": "Notification.Looping.Call",
+                "EN": "Incoming Call Notification 1",
+                "ZH": "来电通知 1"
             },
             {
-                "id": "Notification.Looping.Call10",
-                "en": "Incoming Call Notification 10",
-                "zh": "来电通知 10"
+                "ID": "Notification.Looping.Call10",
+                "EN": "Incoming Call Notification 10",
+                "ZH": "来电通知 10"
             },
             {
-                "id": "Notification.Looping.Call2",
-                "en": "Incoming Call Notification 2",
-                "zh": "来电通知 2"
+                "ID": "Notification.Looping.Call2",
+                "EN": "Incoming Call Notification 2",
+                "ZH": "来电通知 2"
             },
             {
-                "id": "Notification.Looping.Call3",
-                "en": "Incoming Call Notification 3",
-                "zh": "来电通知 3"
+                "ID": "Notification.Looping.Call3",
+                "EN": "Incoming Call Notification 3",
+                "ZH": "来电通知 3"
             },
             {
-                "id": "Notification.Looping.Call4",
-                "en": "Incoming Call Notification 4",
-                "zh": "来电通知 4"
+                "ID": "Notification.Looping.Call4",
+                "EN": "Incoming Call Notification 4",
+                "ZH": "来电通知 4"
             },
             {
-                "id": "Notification.Looping.Call5",
-                "en": "Incoming Call Notification 5",
-                "zh": "来电通知 5"
+                "ID": "Notification.Looping.Call5",
+                "EN": "Incoming Call Notification 5",
+                "ZH": "来电通知 5"
             },
             {
-                "id": "Notification.Looping.Call6",
-                "en": "Incoming Call Notification 6",
-                "zh": "来电通知 6"
+                "ID": "Notification.Looping.Call6",
+                "EN": "Incoming Call Notification 6",
+                "ZH": "来电通知 6"
             },
             {
-                "id": "Notification.Looping.Call7",
-                "en": "Incoming Call Notification 7",
-                "zh": "来电通知 7"
+                "ID": "Notification.Looping.Call7",
+                "EN": "Incoming Call Notification 7",
+                "ZH": "来电通知 7"
             },
             {
-                "id": "Notification.Looping.Call8",
-                "en": "Incoming Call Notification 8",
-                "zh": "来电通知 8"
+                "ID": "Notification.Looping.Call8",
+                "EN": "Incoming Call Notification 8",
+                "ZH": "来电通知 8"
             },
             {
-                "id": "Notification.Looping.Call9",
-                "en": "Incoming Call Notification 9",
-                "zh": "来电通知 9"
+                "ID": "Notification.Looping.Call9",
+                "EN": "Incoming Call Notification 9",
+                "ZH": "来电通知 9"
             },
             {
-                "id": "Notification.Mail",
-                "en": "New Mail Notification",
-                "zh": "新邮件通知"
+                "ID": "Notification.Mail",
+                "EN": "New Mail Notification",
+                "ZH": "新邮件通知"
             },
             {
-                "id": "Notification.Proximity",
-                "en": "NFP Completion",
-                "zh": "NFP 完成"
+                "ID": "Notification.Proximity",
+                "EN": "NFP Completion",
+                "ZH": "NFP 完成"
             },
             {
-                "id": "Notification.Reminder",
-                "en": "Calendar Reminder",
-                "zh": "日历提醒"
+                "ID": "Notification.Reminder",
+                "EN": "Calendar Reminder",
+                "ZH": "日历提醒"
             },
             {
-                "id": "Notification.SMS",
-                "en": "New Text Message Notification",
-                "zh": "新短信通知"
+                "ID": "Notification.SMS",
+                "EN": "New Text Message Notification",
+                "ZH": "新短信通知"
             },
             {
-                "id": "Open",
-                "en": "Open Program",
-                "zh": "打开程序"
+                "ID": "Open",
+                "EN": "Open Program",
+                "ZH": "打开程序"
             },
             {
-                "id": "PrintComplete",
-                "en": "Print Complete",
-                "zh": "打印结束"
+                "ID": "PrintComplete",
+                "EN": "Print Complete",
+                "ZH": "打印结束"
             },
             {
-                "id": "ProximityConnection",
-                "en": "NFP Connection",
-                "zh": "NFP 连接"
+                "ID": "ProximityConnection",
+                "EN": "NFP Connection",
+                "ZH": "NFP 连接"
             },
             {
-                "id": "RestoreDown",
-                "en": "Restore Down",
-                "zh": "向下还原"
+                "ID": "RestoreDown",
+                "EN": "Restore Down",
+                "ZH": "向下还原"
             },
             {
-                "id": "RestoreUp",
-                "en": "Restore Up",
-                "zh": "向上还原"
+                "ID": "RestoreUp",
+                "EN": "Restore Up",
+                "ZH": "向上还原"
             },
             {
-                "id": "ShowBand",
-                "en": "Show Toolbar Band",
-                "zh": "显示工具栏区"
+                "ID": "ShowBand",
+                "EN": "Show Toolbar Band",
+                "ZH": "显示工具栏区"
             },
             {
-                "id": "SystemAsterisk",
-                "en": "Asterisk",
-                "zh": "星号"
+                "ID": "SystemAsterisk",
+                "EN": "Asterisk",
+                "ZH": "星号"
             },
             {
-                "id": "SystemExclamation",
-                "en": "Exclamation",
-                "zh": "感叹号"
+                "ID": "SystemExclamation",
+                "EN": "Exclamation",
+                "ZH": "感叹号"
             },
             {
-                "id": "SystemExit",
-                "en": "Exit Windows",
-                "zh": "Windows 退出"
+                "ID": "SystemExit",
+                "EN": "Exit Windows",
+                "ZH": "Windows 退出"
             },
             {
-                "id": "SystemHand",
-                "en": "Critical Stop",
-                "zh": "关键性停止"
+                "ID": "SystemHand",
+                "EN": "Critical Stop",
+                "ZH": "关键性停止"
             },
             {
-                "id": "SystemNotification",
-                "en": "System Notification",
-                "zh": "系统通知"
+                "ID": "SystemNotification",
+                "EN": "System Notification",
+                "ZH": "系统通知"
             },
             {
-                "id": "SystemQuestion",
-                "en": "Question",
-                "zh": "问题"
+                "ID": "SystemQuestion",
+                "EN": "Question",
+                "ZH": "问题"
             },
             {
-                "id": "WindowsLogoff",
-                "en": "Windows Logoff",
-                "zh": "Windows 注销"
+                "ID": "WindowsLogoff",
+                "EN": "Windows Logoff",
+                "ZH": "Windows 注销"
             },
             {
-                "id": "WindowsLogon",
-                "en": "Windows Logon",
-                "zh": "Windows 登录"
+                "ID": "WindowsLogon",
+                "EN": "Windows Logon",
+                "ZH": "Windows 登录"
             },
             {
-                "id": "WindowsUAC",
-                "en": "Windows User Account Control",
-                "zh": "Windows 用户账户控制"
+                "ID": "WindowsUAC",
+                "EN": "Windows User Account Control",
+                "ZH": "Windows 用户账户控制"
             },
             {
-                "id": "WindowsUnlock",
-                "en": "Windows Unlock",
-                "zh": "Windows 解锁"
+                "ID": "WindowsUnlock",
+                "EN": "Windows Unlock",
+                "ZH": "Windows 解锁"
             }
         ]
     },
@@ -303,39 +303,39 @@
         "App": "Explorer",
         "EventLables": [
             {
-                "id": "ActivatingDocument",
-                "en": "Complete Navigation",
-                "zh": "完成导航"
+                "ID": "ActivatingDocument",
+                "EN": "Complete Navigation",
+                "ZH": "完成导航"
             },
             {
-                "id": "BlockedPopup",
-                "en": "Blocked Pop-up Window",
-                "zh": "阻止的弹出窗口"
+                "ID": "BlockedPopup",
+                "EN": "Blocked Pop-up Window",
+                "ZH": "阻止的弹出窗口"
             },
             {
-                "id": "EmptyRecycleBin",
-                "en": "Empty Recycle Bin",
-                "zh": "清空回收站"
+                "ID": "EmptyRecycleBin",
+                "EN": "Empty Recycle Bin",
+                "ZH": "清空回收站"
             },
             {
-                "id": "FeedDiscovered",
-                "en": "Feed Discovered",
-                "zh": "已发现源"
+                "ID": "FeedDiscovered",
+                "EN": "Feed Discovered",
+                "ZH": "已发现源"
             },
             {
-                "id": "MoveMenuItem",
-                "en": "Move Menu Item",
-                "zh": "移动菜单项"
+                "ID": "MoveMenuItem",
+                "EN": "Move Menu Item",
+                "ZH": "移动菜单项"
             },
             {
-                "id": "Navigating",
-                "en": "Start Navigation",
-                "zh": "启动导航"
+                "ID": "Navigating",
+                "EN": "Start Navigation",
+                "ZH": "启动导航"
             },
             {
-                "id": "SecurityBand",
-                "en": "Information Bar",
-                "zh": "通知栏"
+                "ID": "SecurityBand",
+                "EN": "Information Bar",
+                "ZH": "通知栏"
             }
         ]
     },
@@ -343,34 +343,34 @@
         "App": "sapisvr",
         "EventLables": [
             {
-                "id": "DisNumbersSound",
-                "en": "Disambiguation Numbers",
-                "zh": "消除歧义号码"
+                "ID": "DisNumbersSound",
+                "EN": "Disambiguation Numbers",
+                "ZH": "消除歧义号码"
             },
             {
-                "id": "HubOffSound",
-                "en": "Off",
-                "zh": "关闭"
+                "ID": "HubOffSound",
+                "EN": "Off",
+                "ZH": "关闭"
             },
             {
-                "id": "HubOnSound",
-                "en": "On",
-                "zh": "启用"
+                "ID": "HubOnSound",
+                "EN": "On",
+                "ZH": "启用"
             },
             {
-                "id": "HubSleepSound",
-                "en": "Sleep",
-                "zh": "睡眠"
+                "ID": "HubSleepSound",
+                "EN": "Sleep",
+                "ZH": "睡眠"
             },
             {
-                "id": "MisrecoSound",
-                "en": "Misrecognition",
-                "zh": "误识别"
+                "ID": "MisrecoSound",
+                "EN": "Misrecognition",
+                "ZH": "误识别"
             },
             {
-                "id": "PanelSound",
-                "en": "Disambiguation Panel",
-                "zh": "消除歧义面板"
+                "ID": "PanelSound",
+                "EN": "Disambiguation Panel",
+                "ZH": "消除歧义面板"
             }
         ]
     }
