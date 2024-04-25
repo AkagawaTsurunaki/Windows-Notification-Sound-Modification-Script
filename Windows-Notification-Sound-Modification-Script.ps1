@@ -78,7 +78,7 @@ function SetTone {
 
 $eventLables = ReadEventLablesFromJsonFile
 
-$toneFolderPath = Read-Host -Prompt "Please enter the path of the folder that stores tones"
+$toneFolderPath = Read-Host -Prompt "Please enter the path of the folder that stores notification sounds"
 
 $tonePackageName = Split-Path $toneFolderPath -Leaf
 Write-Host "Tone package" $tonePackageName "found"
@@ -100,4 +100,6 @@ foreach ($toneFileName in $allToneFilesInfo.Keys) {
     }
 }
 
-Write-Host "Tone package $tonePackageName has been registered in your system successfully"
+Write-Host "Notification sound package $tonePackageName has been registered in your system successfully"
+Write-Host "Note: You need to REBOOT your computer to make effect."
+Read-Host "Press any key to exit..."
