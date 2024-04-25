@@ -14,8 +14,9 @@
 
 1. 在 Windows 系统中，右键“Windows-Notification-Sound-Modification-Script.ps1”。
 2. 输入提示音文件夹所在的路径，回车。注意：这个文件夹里面应该直接就是以 `.wav` 为后缀的音频文件，且文件夹的名称必须是英文。
-3. 看到 `提示音设置完毕！请按任意键退出脚本。` 字样且没有红色报错文字字样，就证明提示音已经设置成功了。
-4. 最后重启计算机后，可以通过“控制面板——更改系统声音”查看已经加载的提示音包。
+3. 看到 `Notification sound package $tonePackageName has been registered in your system successfully"` 字样且没有红色报错文字字样，就证明提示音已经设置成功了。
+4. 随后**重启计算机**使系统提示音刷新，不重启会出现提示音无法播放的问题。
+5. 可以通过“控制面板——更改系统声音————声音方案”查看已经加载的提示音包。
 
 ## 问题
 
@@ -47,7 +48,9 @@ set-ExecutionPolicy RemoteSigned
 
 ## 工作原理
 
-此脚本用于将提示音自动注册到注册表中。它会过滤出指定文件夹中的以 `.wav` 为后缀的文件，然后按照一定的映射规则将文件名对应的 Windows AppEvent 提示音的注册表项 `HKCU:\AppEvents\Schemes\Apps\$App\$ID\$PackageName` 下的子项进行修改。
+此脚本用于将提示音自动注册到注册表中。
+
+它会过滤出指定文件夹中的以 `.wav` 为后缀的文件，然后按照一定的映射规则将文件名对应的 Windows AppEvent 提示音的注册表项 `HKCU:\AppEvents\Schemes\Apps\$App\$ID\$PackageName` 下的子项进行修改。
 
 具体地说，在 `EventLables.json` 存储了一种模式，它指导着 PowerShell 脚本如何将对应的注册表项设置为提示音的绝对路径。因此，**除非您知道您在做什么，否则不要更改 `EventLables.json` 文件**。以下是 `EventLables.json` 文件的树状结构：
 
