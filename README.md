@@ -6,17 +6,73 @@
 
 本 PowerShell 脚本可以按照一定的映射规则将一个文件夹内的提示音文件自动注册至 Windows 系统的声音方案中。
 
-## 准备工作
+## 脚本使用方法
 
-您的 Windows 系统中，必须已经安装了合适版本的 [PowerShell](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)，并且该用户具有修改注册表的权限。
+如果您具有一定的计算机基础，了解了命令行等知识，可以尝试使用此脚本快速设置提示音。
 
-## 用法
+### 解压并移动提示音包
 
-1. 在 Windows 系统中，右键“Windows-Notification-Sound-Modification-Script.ps1”。
-2. 输入提示音文件夹所在的路径，回车。注意：这个文件夹里面应该直接就是以 `.wav` 为后缀的音频文件，且文件夹的名称必须是英文。
-3. 看到 `Notification sound package $tonePackageName has been registered in your system successfully"` 字样且没有红色报错文字字样，就证明提示音已经设置成功了。
-4. 随后**重启计算机**使系统提示音刷新，不重启会出现提示音无法播放的问题。
-5. 可以通过“控制面板——更改系统声音————声音方案”查看已经加载的提示音包。
+这里所说的提示音包其实就是存放着以 `.wav` 为后缀的音频文件的文件夹。例如您的一个名为 TendouArisu 语音包，里面装着若干个提示音。那么请将这个语音包复制（或剪切）到 `C:\Windows\Media\` 下（推荐），最后的目录结构如下图所示
+
+```
+- C
+  └─Windows
+    └─Media
+      └─TendouArisu
+        ├─NFP 连接.wav
+        ├─NFP 完成.wav
+        └─...
+```
+
+### 检查您的 Windows Powershell
+
+为了确保您能运行此脚本，先在搜索栏输入“Windows PowerShell”，如果您可以找到 Windows PowerShell 这个应用程序，说明您的系统已经安装了 Windows PowerShell。
+
+自 Windows 7 开始，Windows PowerShell 已经内置到您的计算机中。请注意，**Powershell 和 Windows Powershell 并不是一个东西**，我们需要的是 Windows PowerShell。
+
+如果您的系统没有安装 Windows PowerShell，请自行下载安装。
+
+### 更改 Windows  PowerShell 执行策略
+
+在搜索栏输入“Windows PowerShell”，以**管理员权限**运行 Windows PowerShell，在弹出的窗口内输入命令
+
+```powershell
+set-ExecutionPolicy RemoteSigned
+```
+
+按下 `Enter` 键后，会显示如下字样
+
+```
+执行策略更改
+执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险...
+是否要更改执行策略?
+[Y] 是(Y) [A] 全是(A) [N] 否(N) [L] 全否(L) [S]暂停(S) [?]帮助(默认值为“N”):
+```
+
+此时，请输入“A”，按下 `Enter` 键后可以关闭此窗口。
+
+**注意：**
+
+1. 必须以**管理员权限**运行，否则无法修改 Windows PowerShell 的执行策略。
+2. **必须使用 Windows PowerShell** 而不是 PowerShell。
+
+### 运行脚本
+
+在 Windows 系统中，右键“Windows-Notification-Sound-Modification-Script.ps1”。
+
+这会弹出一个窗口，显示如下字样
+
+```
+Please enter the path of the folder that stores tones:
+```
+
+这是在提示您输入提示音所在的文件夹路径。这个文件夹里面应该直接就是以 `.wav` 为后缀的音频文件，且文件夹的名称**必须是英文**。
+
+**输入提示音文件夹所在的路径**，按下 `Enter` 键。看到类似 `Notification sound package $tonePackageName has been registered in your system successfully` 字样且没有红色报错文字字样，就证明提示音已经设置成功了。
+
+随后**重启计算机**使系统提示音刷新，不重启会出现提示音无法播放的问题。
+
+最后，可以通过“控制面板——更改系统声音——声音方案”**选择已经加载的提示音包**，并点击“应用”使其生效。
 
 ## 问题
 
@@ -24,15 +80,26 @@
 
 此 PowerShell 脚本将会修改您的计算机中的注册表，因此可能会被拒绝执行。如果出现了“无法加载文件，因为在此系统上禁止运行脚本”字样，请依照以下方法授予权限。
 
-通过管理员权限运行 Power Shell，然后在窗口中输入命令
+通过管理员权限运行 Windows PowerShell，然后在窗口中输入命令
 
 ```powershell
 set-ExecutionPolicy RemoteSigned
 ```
 
-最后选择“是”即可更改策略，从而再次运行脚本即可。
+最后输入“A”即可更改策略，从而再次运行脚本即可。
 
 如果您对这些权限存有疑惑或安全隐患等，可以查看源代码。同时关于更多有关的安全策略的信息，请参阅[这里](https:\go.microsoft.com\fwlink\?LinkID=135170)。
+
+### 运行脚本时出现错误
+
+```
+Line |
+11   |            throw [System.I0.FileNotFoundException] "$eventLablesJsonFile ...
+	 |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 | .\EventLables.json not found.
+```
+
+您必须在脚本所在的文件夹启动脚本，在其他路径打开脚本会导致相对路径出错。请找到 `Windows-Notification-Sound-Modification-Script.ps1` 并右键“**使用 PowerShell 运行**”。
 
 ### 设置后可以移动提示音文件夹吗？
 
@@ -42,9 +109,9 @@ set-ExecutionPolicy RemoteSigned
 2. 重新运行脚本。
 3. 输入新的提示音所在的文件夹。
 
-### 脚本代码乱码
+### 为什么要将提示音放在 C 盘？
 
-脚本因为包含中文字符，因此请使用 `GBK` 编码打开脚本文件，使用 `UTF-8` 编码打开将会产生乱码。
+理论上您可以将提示音包放置在您的电脑的任何位置上。但是，由于 Windows 特殊的提示音加载机制，导致存放在**非系统盘的提示音在读取有一定几率失效**。所以推荐放在 `C:\Windows\Media` 目录下。
 
 ## 工作原理
 
