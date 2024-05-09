@@ -1,7 +1,7 @@
 [
     {
         "App": ".Default",
-        "EventLables": [
+        "EventLabels": [
             {
                 "ID": ".Default",
                 "EN": "Default Beep",
@@ -301,7 +301,7 @@
     },
     {
         "App": "Explorer",
-        "EventLables": [
+        "EventLabels": [
             {
                 "ID": "ActivatingDocument",
                 "EN": "Complete Navigation",
@@ -341,7 +341,7 @@
     },
     {
         "App": "sapisvr",
-        "EventLables": [
+        "EventLabels": [
             {
                 "ID": "DisNumbersSound",
                 "EN": "Disambiguation Numbers",
