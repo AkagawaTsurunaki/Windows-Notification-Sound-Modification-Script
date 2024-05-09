@@ -33,11 +33,11 @@ function GetEventLable {
         $eventLables
     )
     foreach ($app in $eventLables) {
-        foreach ($lable in $app.EventLabels) {
-            if ($lang -eq 'EN' -and $lable.EN -eq $eventLable) {
-                return @{App=$app.App; id=$lable.ID}
-            } elseif ($lang -eq 'ZH' -and $lable.ZH -eq $eventLable) {
-                return @{App=$app.App; id=$lable.ID}
+        foreach ($label in $app.EventLabels) {
+            if ($lang -eq 'EN' -and $label.EN -eq $eventLable) {
+                return @{App=$app.App; id=$label.ID}
+            } elseif ($lang -eq 'ZH' -and $label.ZH -eq $eventLable) {
+                return @{App=$app.App; id=$label.ID}
             }
         }
     } 
