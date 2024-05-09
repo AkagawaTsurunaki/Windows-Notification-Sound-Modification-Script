@@ -4,7 +4,7 @@ Author: AkagawaTsurunaki
 
 function ReadEventLablesFromJsonFile {
     param ()
-    $eventLablesJsonFilePath = '.\EventLables.json'
+    $eventLablesJsonFilePath = '.\EventLabels.json'
     if (Test-Path $eventLablesJsonFilePath) {
         return Get-Content -Path $eventLablesJsonFilePath -Raw -Encoding UTF8 | ConvertFrom-Json
     } else {
