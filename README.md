@@ -58,7 +58,7 @@ set-ExecutionPolicy RemoteSigned
 
 ### 运行脚本
 
-在 Windows 系统中，右键“Windows-Notification-Sound-Modification-Script.ps1”。
+在 Windows 系统中，右键“Windows-Notification-Sound-Modification-Script.ps1”，选择“**使用 PowerShell 运行**”。
 
 这会弹出一个窗口，显示如下字样
 
