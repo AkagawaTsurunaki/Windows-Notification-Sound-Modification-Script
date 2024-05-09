@@ -2,13 +2,13 @@
 Author: AkagawaTsurunaki
 #>
 
-function ReadEventLablesFromJsonFile {
+function ReadEventLabelsFromJsonFile {
     param ()
-    $eventLablesJsonFilePath = '.\EventLabels.json'
-    if (Test-Path $eventLablesJsonFilePath) {
-        return Get-Content -Path $eventLablesJsonFilePath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $eventLabelsJsonFilePath = '.\EventLabels.json'
+    if (Test-Path $eventLabelsJsonFilePath) {
+        return Get-Content -Path $eventLabelsJsonFilePath -Raw -Encoding UTF8 | ConvertFrom-Json
     } else {
-        throw [System.IO.FileNotFoundException] "$eventLablesJsonFilePath not found."
+        throw [System.IO.FileNotFoundException] "$eventLabelsJsonFilePath not found."
     }
 }
 
@@ -26,17 +26,17 @@ function GetAllToneFilesInfo {
     return $fileHashTable
 }
 
-function GetEventLable {
+function GetEventLabel {
     param (
         [string]$lang,
-        [string]$eventLable,
-        $eventLables
+        [string]$eventLabel,
+        $eventLabels
     )
-    foreach ($app in $eventLables) {
+    foreach ($app in $eventLabels) {
         foreach ($label in $app.EventLabels) {
-            if ($lang -eq 'EN' -and $label.EN -eq $eventLable) {
+            if ($lang -eq 'EN' -and $label.EN -eq $eventLabel) {
                 return @{App=$app.App; id=$label.ID}
-            } elseif ($lang -eq 'ZH' -and $label.ZH -eq $eventLable) {
+            } elseif ($lang -eq 'ZH' -and $label.ZH -eq $eventLabel) {
                 return @{App=$app.App; id=$label.ID}
             }
         }
@@ -76,7 +76,7 @@ function SetTone {
     return Test-Path $registryItem
 }
 
-$eventLables = ReadEventLablesFromJsonFile
+$eventLabels = ReadEventLabelsFromJsonFile
 
 $toneFolderPath = Read-Host -Prompt "Please enter the path of the folder that stores notification sounds"
 
@@ -90,9 +90,9 @@ $allToneFilesInfo = GetAllToneFilesInfo -toneFolderPath $toneFolderPath
 Write-Host $allToneFilesInfo.Keys.Count "tone file(s) found"
 
 foreach ($toneFileName in $allToneFilesInfo.Keys) {
-    $eventLable = GetEventLable -lang 'ZH' -eventLable $toneFileName -eventLables $eventLables
-    if ($eventLable) {
-        $registryItem = "HKCU:\AppEvents\Schemes\Apps\" + $eventLable.App +"\" + $eventLable.ID + "\" + $TonePackageId
+    $eventLabel = GetEventLabel -lang 'ZH' -eventLabel $toneFileName -eventLabels $eventLabels
+    if ($eventLabel) {
+        $registryItem = "HKCU:\AppEvents\Schemes\Apps\" + $eventLabel.App +"\" + $eventLabel.ID + "\" + $TonePackageId
         $toneFilePath = $allToneFilesInfo[$toneFileName]
         if (SetTone -registryItem $registryItem -toneFilePath $toneFilePath) {
             Write-Host "Set $registryItem to $toneFilePath"
