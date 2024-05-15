@@ -1,8 +1,9 @@
 # Windows 提示音修改脚本
 
 > 仓库： [AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script (github.com)](https://github.com/AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script)
+> 
+> Github：[AkagawaTsurunaki](https://github.com/AkagawaTsurunaki)
 >
-> 作者：[AkagawaTsurunaki](https://github.com/AkagawaTsurunaki)
 > Bilibili：[赤川鶴鳴_Channel](https://space.bilibili.com/1076299680)
 
 本 PowerShell 脚本可以按照一定的映射规则将一个文件夹内的提示音文件自动注册至 Windows 系统的声音方案中。
