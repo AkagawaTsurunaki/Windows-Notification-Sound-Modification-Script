@@ -2,7 +2,8 @@
 
 > 仓库： [AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script (github.com)](https://github.com/AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script)
 >
-> 作者：AkagawaTsurunaki
+> 作者：[AkagawaTsurunaki](https://github.com/AkagawaTsurunaki)
+> Bilibili：[赤川鶴鳴_Channel](https://space.bilibili.com/1076299680)
 
 本 PowerShell 脚本可以按照一定的映射规则将一个文件夹内的提示音文件自动注册至 Windows 系统的声音方案中。
 
@@ -23,6 +24,8 @@
         ├─NFP 完成.wav
         └─...
 ```
+
+如果您下载的文件是 `.zip` 结尾的，那么请先解压。
 
 ### 检查您的 Windows Powershell
 
@@ -50,6 +53,8 @@ set-ExecutionPolicy RemoteSigned
 ```
 
 此时，请输入“A”，按下 `Enter` 键后可以关闭此窗口。
+
+如果没有显示此字样，可能是因为您的 PowerShell 并没有自动将结果返回，但实际上已经设置完成。
 
 **注意：**
 
@@ -94,9 +99,9 @@ set-ExecutionPolicy RemoteSigned
 
 ```
 Line |
-11   |            throw [System.I0.FileNotFoundException] "$eventLablesJsonFile ...
+11   |            throw [System.I0.FileNotFoundException] "$eventLabelsJsonFile ...
 	 |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	 | .\EventLables.json not found.
+	 | .\EventLabels.json not found.
 ```
 
 您必须在脚本所在的文件夹启动脚本，在其他路径打开脚本会导致相对路径出错。请找到 `Windows-Notification-Sound-Modification-Script.ps1` 并右键“**使用 PowerShell 运行**”。
@@ -123,13 +128,13 @@ Line |
 
 它会过滤出指定文件夹中的以 `.wav` 为后缀的文件，然后按照一定的映射规则将文件名对应的 Windows AppEvent 提示音的注册表项 `HKCU:\AppEvents\Schemes\Apps\$App\$ID\$PackageName` 下的子项进行修改。
 
-具体地说，在 `EventLables.json` 存储了一种模式，它指导着 PowerShell 脚本如何将对应的注册表项设置为提示音的绝对路径。因此，**除非您知道您在做什么，否则不要更改 `EventLables.json` 文件**。以下是 `EventLables.json` 文件的树状结构：
+具体地说，在 `EventLabels.json` 存储了一种模式，它指导着 PowerShell 脚本如何将对应的注册表项设置为提示音的绝对路径。因此，**除非您知道您在做什么，否则不要更改 `EventLabels.json` 文件**。以下是 `EventLabels.json` 文件的树状结构：
 
 ```
 └─  (array)
    └─  (object)
       ├─ "App" (string)
-      └─ "EventLables" (array)
+      └─ "EventLabels" (array)
          └─  (object)
             ├─ "ID" (string)
             ├─ "EN" (string)
@@ -143,7 +148,7 @@ Line |
 3. 尝试修改注册表中 `HKCU:\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\Akaga0` 项。注意，注册表只会存储提示音包名的前5个字符和1个自增的数字。
 4. 注册表 `HKCU:\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\Akaga0` 项的 `(Default)` 键值将被设置为 `电池严重短缺警报.wav` 的绝对路径。
 
-PowerShell 会对每一个提示音音频文件（以 `.wav` 为后缀）进行遍历，并尝试设置。如果提示音文件名不在 `EventLables.json` 中存在映射，那么将不会被设置。
+PowerShell 会对每一个提示音音频文件（以 `.wav` 为后缀）进行遍历，并尝试设置。如果提示音文件名不在 `EventLabels.json` 中存在映射，那么将不会被设置。
 
 具体的映射规则表请见下表：
 
