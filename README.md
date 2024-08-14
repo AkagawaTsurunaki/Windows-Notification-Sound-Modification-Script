@@ -1,12 +1,14 @@
 # Windows 提示音修改脚本
 
 > 仓库： [AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script (github.com)](https://github.com/AkagawaTsurunaki/Windows-Notification-Sound-Modification-Script)
-> 
+>
 > Github：[AkagawaTsurunaki](https://github.com/AkagawaTsurunaki)
 >
 > Bilibili：[赤川鶴鳴_Channel](https://space.bilibili.com/1076299680)
 
 本 PowerShell 脚本可以按照一定的映射规则将一个文件夹内的提示音文件自动注册至 Windows 系统的声音方案中。
+
+**⚠️ 2024年8月14日18时前下载此脚本的用户请更新脚本或重新下载，否则遇到提示音包的名称字符串少于 5 的情况，脚本可能会报错。**
 
 ## 脚本使用方法
 
