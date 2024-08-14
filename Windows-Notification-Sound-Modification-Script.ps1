@@ -51,7 +51,11 @@ function CreateAppEventsSchemesNamesByPackageName {
     $path = ""
     [string]$pkgId = ""
     do {
-        $pkgId = $tonePackageName.Substring(0, 5) + $i
+        if ($tonePackageName.Length -ge 5) {
+            $pkgId = $tonePackageName.Substring(0, 5) + $i
+        } else {
+            $pkgId = $tonePackageName + $i
+        }
         $path = "HKCU:\AppEvents\Schemes\Names\$pkgId"
         $i = $i + 1
     } while (
