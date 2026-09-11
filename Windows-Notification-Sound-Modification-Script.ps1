@@ -4,7 +4,7 @@ Author: AkagawaTsurunaki
 
 function ReadEventLabelsFromJsonFile {
     param ()
-    $eventLabelsJsonFilePath = '.\EventLabels.json'
+    $eventLabelsJsonFilePath = Join-Path $PSScriptRoot 'EventLabels.json'
     if (Test-Path $eventLabelsJsonFilePath) {
         return Get-Content -Path $eventLabelsJsonFilePath -Raw -Encoding UTF8 | ConvertFrom-Json
     } else {
